@@ -3,23 +3,21 @@ Yolo is more a folder format that a text output format:
 Yolov5 data set file would look like this:
 
 dataset.yaml 
--------------------
+```
 path: /data/  
 train: train/images
 val: val/images
-# test: test.txt
 
 nc: 2
 
 names:
   - background
   - detection
-  
--------------------
+```  
 
 A Proper dataset would look like this:
 Tree structure of folders and dataset.yaml 
--------------------
+```
 .
 ├── dataset.yaml
 ├── train
@@ -36,20 +34,22 @@ Tree structure of folders and dataset.yaml
     └── labels
         ├── 0.txt
         └── 1.txt
--------------------
+```
 
 labels have the format below 
 each line looks like the below: 
+
 ```
 1 0.44765625000000003 0.7976562500000001 0.0421875 0.035937500000000004
 ```
+
 Breaking down each section, which are separated by spaces. 
-<object-class> <x> <y> <width> <height>
+`<object-class> <x> <y> <width> <height>`
 
 1 - this is the label number from the dataset.yaml file for the object-classes sepcified in the names section of the dataset.yaml 
-
+```
 0.4476 0.7976 0.0421 0.035
 <x> <y> <width> <height>
-
+```
 Measure from the top left corner in proportion to the size of the image. 
 
