@@ -52,3 +52,12 @@ Breaking down each section, which are separated by spaces.
 1 - this is the label number from the dataset.yaml file for the object-classes sepcified in the names section of the dataset.yaml 
 Measure from the top left corner in proportion to the size of the image. 
 
+Run these commands to get started: 
+
+```
+git clone git@github.com:wjutrkker/docker-fiftyone.git
+cd docker-fiftyone
+unzip yolo-example
+chmod -R 777 yolo-example
+docker run -it --ipc=host -p 5151:5151 -v $PWD:/data voxel51/fiftyone:latest ipython /data/fiftyone-run.py 
+``````
