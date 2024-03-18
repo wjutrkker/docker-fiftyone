@@ -47,12 +47,8 @@ each line looks like the below:
 ```
 
 Breaking down each section, which are separated by spaces. 
-`<object-class> <x> <y> <width> <height>`
+`<object-class> <x-center> <y-center> <width> <height>`
 
 1 - this is the label number from the dataset.yaml file for the object-classes sepcified in the names section of the dataset.yaml 
-```
-0.4476 0.7976 0.0421 0.035
-<x> <y> <width> <height>
-```
 Measure from the top left corner in proportion to the size of the image. 
 
